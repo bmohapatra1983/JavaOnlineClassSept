@@ -5,6 +5,10 @@ public class NamingConventionTest {
     void add123(){
         float PI = 3.14F;
     }
+    void findArea(int r){
+        final float PI = 3.14F;
+        System.out.println("Area: "+PI * r * r);
+    }
 
     public static void main(String[] args) {
         int a;
