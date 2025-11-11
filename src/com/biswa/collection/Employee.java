@@ -1,9 +1,15 @@
 package com.biswa.collection;
 
+import java.util.Objects;
+
 public class Employee {
     private int id;
     private String name;
     private double salary;
+
+    Employee(){
+
+    }
 
     public Employee(int id, String name, double salary) {
         this.id = id;
@@ -33,5 +39,17 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
     }
 }
